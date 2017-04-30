@@ -1,0 +1,19 @@
+<div class="row feed">
+  <div class="col-md-4"><h4>LogIn:</h4><br><br>
+    <input type = "text" class="form-control" placeholder="User Name" ng-model = "username"><br>
+    <input type = "password" class="form-control" placeholder="Password" ng-model = "password">
+    <br><br>
+    <a href = "#/signup">Not a member? Signup</a>
+    <button type="submit" class="btn btn-primary" ng-click = "login()">LogIn</button>
+</div>
+  <div class="col-md-8">
+      <div class  = "comment">
+        <input type="text" class="form-control" ng-model = "newComment" placeholder="Comment here..."><br>
+        <button type="submit" class="btn btn-primary" ng-click = "submitNewComment()">Submit</button>
+      </div>
+        <h3 ng-repeat = "myArray in myArrays">
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          {{ myArray.text }}
+          <a href ng-click="removeComment(myArray)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+        </h3>
+</div>
